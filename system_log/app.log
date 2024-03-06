@@ -1,0 +1,30 @@
+[2024-01-29T16:46:43.473] [DEBUG] User - Attempting to retrieve users...
+[2024-01-29T16:46:43.485] [INFO] User - Successfully retrieved users: [
+  {
+    user_id: 1,
+    email: 'test',
+    password: '123',
+    role_id: 2,
+    enable: 1,
+    last_login: 2024-01-29T16:16:42.000Z,
+    first_name: '23',
+    last_name: '23',
+    phone: '23',
+    refresh_token: '23',
+    createAt: 2024-01-29T10:16:42.000Z,
+    createBy: '23'
+  }
+]
+[2024-01-29T16:51:55.103] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T16:52:14.110] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T16:52:25.653] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T16:52:26.358] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T16:52:27.225] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T16:52:27.907] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T16:52:29.125] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T16:52:29.843] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T16:52:30.708] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T16:52:31.472] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T16:52:32.972] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T17:05:31.581] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-01-29T17:05:37.966] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
