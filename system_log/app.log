@@ -1,30 +1,42 @@
-[2024-01-29T16:46:43.473] [DEBUG] User - Attempting to retrieve users...
-[2024-01-29T16:46:43.485] [INFO] User - Successfully retrieved users: [
-  {
-    user_id: 1,
-    email: 'test',
-    password: '123',
-    role_id: 2,
-    enable: 1,
-    last_login: 2024-01-29T16:16:42.000Z,
-    first_name: '23',
-    last_name: '23',
-    phone: '23',
-    refresh_token: '23',
-    createAt: 2024-01-29T10:16:42.000Z,
-    createBy: '23'
-  }
-]
-[2024-01-29T16:51:55.103] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T16:52:14.110] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T16:52:25.653] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T16:52:26.358] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T16:52:27.225] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T16:52:27.907] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T16:52:29.125] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T16:52:29.843] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T16:52:30.708] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T16:52:31.472] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T16:52:32.972] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T17:05:31.581] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
-[2024-01-29T17:05:37.966] [INFO] User - Successfully retrieved users ::ffff:192.168.100.95
+[2024-03-07T11:16:53.302] [INFO] User - Successfully retrieved users ::1
+[2024-03-07T11:18:06.625] [INFO] User - Successfully retrieved users ::1
+[2024-03-07T11:29:45.805] [INFO] User - Successfully retrieved users ::1
+[2024-03-07T15:11:59.095] [INFO] User - Successfully retrieved users ::1
+[2024-03-07T15:12:25.827] [ERROR] User - Error retrieving users: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.loginUser (D:\Course\task_api\repository\user_repo.js:18:39)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.login (D:\Course\task_api\controller\user_controller.js:29:23)
+[2024-03-07T15:14:02.375] [ERROR] User - Error retrieving users: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.loginUser (D:\Course\task_api\repository\user_repo.js:18:39)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.login (D:\Course\task_api\controller\user_controller.js:30:23)
+[2024-03-07T15:15:18.555] [ERROR] User - Error retrieving users: ReferenceError: accessToken is not defined
+    at Object.loginUser (D:\Course\task_api\repository\user_repo.js:45:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.login (D:\Course\task_api\controller\user_controller.js:29:23)
+[2024-03-07T15:16:01.657] [ERROR] User - Error retrieving users: Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (D:\Course\task_api\node_modules\jsonwebtoken\sign.js:111:20)
+    at Object.loginUser (D:\Course\task_api\repository\user_repo.js:35:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.login (D:\Course\task_api\controller\user_controller.js:29:23)
+[2024-03-07T15:19:34.914] [ERROR] User - Error retrieving users: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.loginUser (D:\Course\task_api\repository\user_repo.js:18:39)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.login (D:\Course\task_api\controller\user_controller.js:29:23)
+[2024-03-07T15:21:41.142] [ERROR] User - Error retrieving users: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.loginUser (D:\Course\task_api\repository\user_repo.js:18:39)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.login (D:\Course\task_api\controller\user_controller.js:29:23)
+[2024-03-07T15:22:51.409] [ERROR] User - Error retrieving users: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.loginUser (D:\Course\task_api\repository\user_repo.js:18:39)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.login (D:\Course\task_api\controller\user_controller.js:29:23)
+[2024-03-07T15:23:10.501] [ERROR] User - Error retrieving users: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.loginUser (D:\Course\task_api\repository\user_repo.js:18:39)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.login (D:\Course\task_api\controller\user_controller.js:29:23)
+[2024-03-07T15:26:05.684] [ERROR] User - Error retrieving users: Error: Invalid email or password
+    at Object.loginUser (D:\Course\task_api\repository\user_repo.js:25:19)
+    at async exports.login (D:\Course\task_api\controller\user_controller.js:29:23)
+[2024-03-07T16:48:41.430] [INFO] User - Successfully retrieved users ::1
+[2024-03-07T17:07:16.336] [INFO] User - Successfully retrieved users ::1

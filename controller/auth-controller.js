@@ -1,6 +1,6 @@
 const log4js = require('log4js');
 const config = require('../function/logger');
-const userRepo = require('../repository/user_repo')
+const userRepo = require('../repository/auth-repo')
 
 log4js.configure(config);
 const logger = log4js.getLogger("User");
@@ -25,8 +25,8 @@ exports.getUser = async (req, res, next) => {
 exports.login = async (req, res, next) => {
     try {
 
-        const { email, password } = req.body;
-        const login = await userRepo.loginUser(email, password, 1, 1);
+        const { email, password,latitude,longitude,device_name } = req.body;
+        const login = await userRepo.loginUser(email, password, latitude, longitude,device_name,req.ip);
         res.status(200).json({
             message: "login successful",
             data: login
@@ -55,5 +55,20 @@ exports.refreshToken = async (req, res, next) => {
     } catch (error) {
         console.error('Error refreshing token:', error);
         res.status(500).json({ error: error.message });
+    }
+};
+
+exports.logout = async (req, res, next) => {
+    try {
+        const { accessToken } = req.body;
+        const success = await userRepo.logout(accessToken);
+        if (success) {
+            res.status(200).json({ message: 'Logout successful' });
+        } else if (!accessToken) {
+            res.status(400).json({ error: 'Invalid access token' });
+        }
+    } catch (error) {
+        console.error('Error logging out:', error);
+        res.status(400).json({ error: error.message });
     }
 };
