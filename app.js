@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 readdirSync('./routes').map((file) => {
-    app.use('/v1/api', require('./routes/' + file));
+    app.use('/v1/api', require('./routes/version_v1' + file));
 });
 
 module.exports = app;
