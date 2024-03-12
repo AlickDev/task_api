@@ -26,7 +26,10 @@ module.exports = {
 
   async createUser(userData) {
     try {
-      const exitEmail = await User.findOne({ email: userData.email });
+      const exitEmail = await User.findOne({
+        where: { email: userData.email },
+      });
+
       if (exitEmail) {
         throw new Error("Email is already in use");
       }
@@ -34,7 +37,7 @@ module.exports = {
       const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(userData.password, salt);
 
-      const newUser = await User.create({
+      await User.create({
         first_name: userData.first_name,
         last_name: userData.last_name,
         avatar: userData.avatar,
@@ -45,11 +48,15 @@ module.exports = {
         group_id: userData.group_id,
         com_id: userData.com_id,
         is_workspace: userData.is_workspace || 0,
-        role_id: userData.role,
+        role_id: userData.role_id,
       });
       return true;
     } catch (error) {
       throw error;
     }
+  },
+
+  async updateUser(userId, updateUserData) {
+     
   },
 };

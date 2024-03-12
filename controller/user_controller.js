@@ -3,10 +3,11 @@ const config = require("../function/logger");
 const userRepo = require("../repository/user_repo");
 
 log4js.configure(config);
-const logger = log4js.getLogger("User");
+const logger = log4js.getLogger("userActivity");
 
 exports.getUser = async (req, res, next) => {
   try {
+    console.log(req.user)
     const users = await userRepo.getUsers();
 
     logger.info("Successfully retrieved users", req.ip);
@@ -23,6 +24,7 @@ exports.getUser = async (req, res, next) => {
 
 exports.createUser = async (req, res, next) => {
   try {
+
     const { user_id, com_id } = req.user;
     const {
       first_name,
@@ -61,20 +63,20 @@ exports.createUser = async (req, res, next) => {
       avatar: avatar,
       email: email,
       password: password,
-      active: active,
+      active: active || 1,
       create_by: user_id,
       group_id: group_id,
       com_id: com_id,
-      is_workspace: is_workspace,
+      is_workspace: is_workspace || 0,
       role_id: role_id,
     };
 
     await userRepo.createUser(newUserData);
-    restart.status(201).send({
+    res.status(201).send({
       message: "User created",
     });
   } catch (error) {
     logger.error("Error retrieving users:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ message: "Internal Server Error", error:error.message});
   }
 };

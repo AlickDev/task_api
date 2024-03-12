@@ -40,3 +40,120 @@
     at async exports.login (D:\Course\task_api\controller\user_controller.js:29:23)
 [2024-03-07T16:48:41.430] [INFO] User - Successfully retrieved users ::1
 [2024-03-07T17:07:16.336] [INFO] User - Successfully retrieved users ::1
+[2024-03-12T09:53:45.302] [INFO] User - Successfully retrieved users ::1
+[2024-03-12T09:55:47.981] [INFO] User - Successfully retrieved users ::1
+[2024-03-12T10:32:45.022] [ERROR] Authentication - Error Error: Invalid username or password
+    at Object.loginUser (E:\Disk_D\Project-root\task_api\repository\auth-repo.js:25:19)
+    at async exports.login (E:\Disk_D\Project-root\task_api\controller\auth-controller.js:27:19) IP: ::1
+[2024-03-12T10:34:47.231] [INFO] Authentication - Login Successful  User_id: 1 IP: ::1
+[2024-03-12T11:24:17.203] [INFO] User - Successfully retrieved users ::1
+[2024-03-12T12:47:30.760] [INFO] User - Successfully retrieved users ::1
+[2024-03-12T12:49:49.738] [INFO] Authentication - Login Successful  User_id: 1 IP: ::1
+[2024-03-12T13:06:11.581] [INFO] User - Successfully retrieved users ::1
+[2024-03-12T13:07:53.061] [INFO] User - Successfully retrieved users ::1
+[2024-03-12T13:13:11.955] [INFO] Authentication - Login Successful  User_id: 1 IP: ::1
+[2024-03-12T13:29:30.197] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:31:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T13:31:30.514] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:31:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T13:32:26.688] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T13:35:17.287] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T13:36:06.566] [ERROR] User - Error retrieving users: ReferenceError: restart is not defined
+    at exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:75:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-03-12T13:39:04.016] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T13:39:55.814] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T13:44:19.932] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T13:47:00.714] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T13:47:28.478] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T13:47:59.293] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T13:49:30.733] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T14:01:17.490] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T14:04:26.168] [ERROR] User - Error retrieving users: TypeError: Cannot read properties of null (reading 'email')
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:30:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T14:12:05.642] [ERROR] User - Error retrieving users: ReferenceError: restart is not defined
+    at exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:75:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-03-12T14:14:31.354] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T14:22:06.538] [ERROR] User - Error retrieving users: ReferenceError: restart is not defined
+    at exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:75:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-03-12T14:30:00.422] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T14:34:20.539] [ERROR] User - Error retrieving users: ReferenceError: restart is not defined
+    at exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:75:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-03-12T14:37:18.145] [ERROR] User - Error retrieving users: TypeError: Cannot read properties of null (reading 'email')
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:30:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T14:38:12.409] [ERROR] User - Error retrieving users: ReferenceError: restart is not defined
+    at exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:75:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-03-12T14:46:32.753] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:32:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T14:46:46.605] [ERROR] User - Error retrieving users: TypeError: Cannot read properties of null (reading 'email')
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:30:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T14:51:01.759] [ERROR] User - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:34:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:74:5)
+[2024-03-12T16:23:36.869] [ERROR] default - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:34:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:76:5)
+[2024-03-12T16:25:07.942] [ERROR] default - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:34:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:75:5)
+[2024-03-12T16:32:06.800] [ERROR] default - Error retrieving users: Error: Email is already in use
+    at Object.createUser (E:\Disk_D\Project-root\task_api\repository\user_repo.js:34:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async exports.createUser (E:\Disk_D\Project-root\task_api\controller\user_controller.js:76:5)
+[2024-03-12T17:19:32.674] [INFO] Authentication - Login Successful  User_id: 7 IP: ::1
+[2024-03-12T17:21:25.548] [INFO] Authentication - Login Successful  User_id: 7 IP: ::1

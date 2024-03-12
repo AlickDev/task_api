@@ -6,7 +6,7 @@ const { User, Company, LoginHistory, Role } = model;
 
 module.exports = {
     async loginUser(email, password, latitude, longitude, device_name, ip_address) {
-        const user = await User.findOne({ email: email });
+        const user = await User.findOne({where:{ email: email }});
         if (!user) {
             throw new Error('Invalid username or password');
         }
@@ -80,13 +80,12 @@ module.exports = {
             // Find user by user_id
             const user = await User.findOne({
                 where: {
-                    user_id: decoded.user_id,
-                    refresh_token: refreshToken
+                    user_id: decoded.user_id
                 }
             });
 
             // Check if user exists and refresh token matches
-            if (!user || user.refresh_token !== refreshToken) {
+            if (!user || user.refresh_token !== refreshToken || user.active !== 1) {
                 throw new Error('Invalid refresh token');
             }
 
@@ -120,6 +119,7 @@ module.exports = {
             throw error;
         }
     },
+
     async logout(accessToken) {
         try {
             // Decode access token to get user_id
