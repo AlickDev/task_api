@@ -44,6 +44,7 @@ module.exports = {
 
         // Save refresh token in the database
         user.refresh_token = refreshToken;
+        user.updated = Date.now();
         await user.save();
 
         // Save login history
@@ -111,6 +112,7 @@ module.exports = {
 
             // Save new refresh token in the database
             user.refresh_token = newRefreshToken;
+            user.updated = Date.now();
             await user.save();
 
 
@@ -136,6 +138,7 @@ module.exports = {
 
             // Remove refresh token from the database
             user.refresh_token = null;
+            user.updated = Date.now();
             await user.save();
 
             return true;

@@ -5,10 +5,10 @@ const userRepo = require("../repository/user_repo");
 log4js.configure(config);
 const logger = log4js.getLogger("userActivity");
 
-exports.getUser = async (req, res, next) => {
+exports.getUsers = async (req, res, next) => {
   try {
-    console.log(req.user)
-    const users = await userRepo.getUsers();
+    const { user_id, com_id } = req.user;
+    const users = await userRepo.getUsers(user_id, com_id);
 
     logger.info("Successfully retrieved users", req.ip);
 
@@ -17,14 +17,16 @@ exports.getUser = async (req, res, next) => {
       data: users,
     });
   } catch (error) {
+    if (error.message === "No data") {
+      res.status(200).json({ message: "Success retrieved users (No data).",data:[] });
+    } else {
     logger.error("Error retrieving users:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ error: "Internal Server Error" })};
   }
 };
 
 exports.createUser = async (req, res, next) => {
   try {
-
     const { user_id, com_id } = req.user;
     const {
       first_name,
@@ -71,12 +73,98 @@ exports.createUser = async (req, res, next) => {
       role_id: role_id,
     };
 
-    await userRepo.createUser(newUserData);
+    const newuser = await userRepo.createUser(newUserData);
     res.status(201).send({
       message: "User created",
     });
+    logger.info("Create new user", "new user id:", newuser.user_id, req.ip);
   } catch (error) {
     logger.error("Error retrieving users:", error);
-    res.status(500).json({ message: "Internal Server Error", error:error.message});
+    res
+      .status(500)
+      .json({ message: "Internal Server Error", error: error.message });
+  }
+};
+
+exports.updateUser = async (req, res, next) => {
+  try {
+    const { userId } = req.params;
+    // Check if userId is not a valid integer
+    if (!Number.isInteger(Number(userId))) {
+      return res.status(400).json({ error: "userId must be an integer" });
+    }
+
+    const { first_name, last_name, avatar, active, group_id, role_id } =
+      req.body;
+    const updatedUserData = {
+      first_name: first_name,
+      last_name: last_name,
+      avatar: avatar,
+      active: active,
+      group_id: group_id,
+      role_id: role_id,
+    };
+
+    await userRepo.updateUser(userId, updatedUserData);
+    res.status(200).json({
+      message: "User updated successfully",
+    });
+  } catch (error) {
+    if (error.message === "User not found") {
+      res.status(404).json({ error: "User not found" });
+    } else {
+      console.error("Error updating user:", error);
+      res.status(500).json({ error: "Internal Server Error" });
+    }
+  }
+};
+
+exports.deleteUser = async (req, res, next) => {
+  try {
+    const userId = req.params.id;
+    // Check if userId is not a valid integer
+    if (!Number.isInteger(Number(userId))) {
+      return res.status(400).json({ error: "userId must be an integer" });
+    }
+
+    const { user_id, com_id } = req.user;
+    await userRepo.deleteUser(userId, com_id);
+
+    res.status(200).json({
+      message: "User deleted successfully",
+    });
+  } catch (error) {
+    if (error.message === "User not found") {
+      res.status(404).json({ error: "User not found" });
+    } else if (error.message === "Not permission") {
+      res.status(400).json({ error: "Not permission" });
+    } else {
+      console.error("Error deleting user:", error);
+      res.status(500).json({ error: "Internal Server Error" });
+    }
+  }
+};
+
+exports.findById = async (req, res, next) => {
+  try {
+    const userId = req.params.id;
+    const { user_id, com_id } = req.user;
+    // Check if userId is not a valid integer
+    if (!Number.isInteger(Number(userId))) {
+      return res.status(400).json({ error: "userId must be an integer" });
+    }
+
+    const user = await userRepo.findById(userId, com_id);
+    res.status(200).json({
+      message: "Get user successfully",
+      data: user,
+    });
+  } catch (error) {
+    if (error.message === "User not found") {
+      res.status(404).json({ error: "User not found" });
+    } else {
+      console.error("Error deleting user:", error);
+      res.status(500).json({ error: "Internal Server Error" });
+    }
   }
 };
