@@ -8,7 +8,7 @@ const helmet = require('helmet')
 const bodyParser = require('body-parser');
 
 
-var app = express();
+const app = express();
 app.use(cors());
 app.use(helmet());
 
